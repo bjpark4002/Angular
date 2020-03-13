@@ -1,0 +1,16 @@
+
+.rootModuleDiv{
+    border: 1px solid blue;
+    width: 450px;
+    float:left;
+
+
+}
+.moduleDiv {
+
+    border: 1px solid blue;
+    width: 180px;
+    float:left;
+    margin: 20px;
+
+}
