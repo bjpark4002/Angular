@@ -1,0 +1,27 @@
+<h1>Customer html works</h1>
+
+ 
+<!-- <input #myvar type="time" (input)="clickHandler($event.target.value)" [value]="title">
+
+<button (click)="getValue(myvar.value)" >Submit</button>
+ -->
+<!-- 
+ <input [(ngModel)]="title" type="text" > 
+
+ {{title}} -->
+ <button (click)=getValue(1) >Submit</button>
+
+ <div *ngIf="flag">
+    <table border="1">
+        <tr>
+            <th>Sr.#</th>
+            <th>Name </th>
+            <th>Age </th>
+        </tr>
+        <tr *ngFor="let item of Customer ; let i = index; let o=odd; let e=even"[ngClass] ="{even:flag , odd=!flag}" >
+            <td>{{e}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Age}}</td>
+        </tr>
+    </table>
+</div>

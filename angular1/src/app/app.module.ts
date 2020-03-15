@@ -9,7 +9,7 @@ import { CustomerComponent } from './customer/customer.component';
 // import { HomeComponent } from './home/home.component';
 // import { SampleComponent } from './sample/sample.component';
 
-
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({  //pass json object.
@@ -22,8 +22,10 @@ import { CustomerComponent } from './customer/customer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MyHomeModule,
-    MySampleModule
+    FormsModule
+    // ,
+    // MyHomeModule,
+    // MySampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
