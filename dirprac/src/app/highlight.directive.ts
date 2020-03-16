@@ -9,10 +9,11 @@ export class HighlightDirective {
 
    }
    
+   @Input('appHighlight') highlightColor: string;
+   @Input() defaultColor: string;
 
-  @HostListener('mouseenter') onMouseEnter(){
-    this.highlight('yellow');
-  
+   @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.highlightColor || this.defaultColor || 'red');
   }
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight(null);
@@ -22,7 +23,6 @@ export class HighlightDirective {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
-  @Input() highlightColor: string;
 
 }
 
