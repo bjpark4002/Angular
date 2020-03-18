@@ -1,14 +1,6 @@
-<h1>Customer html works</h1>
+<!-- <h1>Customer html works</h1>
 
- 
-<!-- <input #myvar type="time" (input)="clickHandler($event.target.value)" [value]="title">
 
-<button (click)="getValue(myvar.value)" >Submit</button>
- -->
-<!-- 
- <input [(ngModel)]="title" type="text" > 
-
- {{title}} -->
  <button (click)=getValue(1) >Submit</button>
 
  <div *ngIf="flag">
@@ -24,4 +16,20 @@
             <td>{{item.Age}}</td>
         </tr>
     </table>
+</div> -->
+<!-- <div> Customer Component
+<h1>
+
+    {{'data from app component : '+ss}}
+</h1>
+
+</div> -->
+
+<div>
+    {{'Counter in Customer Component : ' + counter}}
+
+    <button type="button" (click)="increment()" >Increment</button>
+    <button type="button" (click)="decrement()" >Decrement</button>
+
 </div>
+

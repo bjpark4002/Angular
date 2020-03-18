@@ -10,24 +10,23 @@ import { CustomerComponent } from './customer/customer.component';
 // import { SampleComponent } from './sample/sample.component';
 
 import {FormsModule} from '@angular/forms';
-
+import {DataService} from './services/data.service';
 
 @NgModule({  //pass json object.
   declarations: [
     AppComponent,
     // HomeComponent,
-    // SampleComponent
+    // SampleComponent,
     CustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    // ,
-    // MyHomeModule,
-    // MySampleModule
+    FormsModule,
+    MyHomeModule,
+    MySampleModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
