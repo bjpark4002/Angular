@@ -4,14 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MycustomPipe } from './mycustom.pipe';
+import { HomeComponent } from './home/home.component';
+import { MyobservableComponent } from './myobservable/myobservable.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MycustomPipe
+    MycustomPipe,
+    HomeComponent,
+    MyobservableComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
+    
     AppRoutingModule
   ],
   providers: [],
