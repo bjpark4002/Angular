@@ -36,5 +36,4 @@ export const routingComponents = [
   // DepartmentOverviewComponent,
   // DepartmentContactComponent
 
-
 ]

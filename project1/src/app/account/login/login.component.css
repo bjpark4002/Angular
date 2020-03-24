@@ -1,0 +1,21 @@
+
+div.mainBox{
+
+    border: 1px solid lightgray;
+    margin-left:  50px;
+    margin-right: 50px;
+    height:500px;
+}
+div.titleBox{
+    background-color: rgb(218, 218, 218);
+}
+b.tableTitle{
+    color:rgb(77, 77, 224);
+    font : bold;
+    font-size: medium;
+    margin-left : 30px;
+}
+button.titleButton{
+    float:right;
+    margin-right : 10px;
+}

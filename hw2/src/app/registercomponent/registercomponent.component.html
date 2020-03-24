@@ -1,0 +1,14 @@
+
+
+<div class="loginBoxOut">
+    <div class="loginBoxIn">
+        <h1>Register</h1>
+        <h1 class="usernamePassword"> Username:</h1> <input #usernameRef type="text"  id="boxTemplate"><br>
+        <h1 class="usernamePassword"> Password:</h1> <input #passwordRef type="password"  id="boxTemplate"><br>
+        <h1 class="usernamePassword"> Confirm :</h1> <input #confirmRef type="password"  id="boxTemplate"><br>
+        <button class="button-submit"  (click)="getValue(usernameRef.value, passwordRef.value, confirmRef.value)" >Register</button>
+        <button class="button-submit"  (click)="switchToLogin()"  >Back to Login</button>
+
+    </div>
+
+</div>

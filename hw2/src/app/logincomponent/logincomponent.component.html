@@ -1,10 +1,12 @@
 
 
-
-<div>
-    Username: <input #usernameRef type="text"><br>
-    Password : <input #passwordRef type="password"><br>
-    <button (click)="getValue(usernameRef.value, passwordRef.value)" >Submit</button>
+<div class="loginBoxOut">
+    <div class="loginBoxIn">
+        <h1>Login</h1>
+        <h1 class="usernamePassword"> Username:</h1> <input #usernameRef type="text" id="boxTemplate"><br>
+        <h1 class="usernamePassword"> Password:</h1> <input #passwordRef type="password" id="boxTemplate"><br>
+        <button class="button-submit"  (click)="getValue(usernameRef.value, passwordRef.value)" >Login</button>
+        <button class="button-submit" (click)="switchToRegister()"  >Register</button>
+    </div>
 
 </div>
-
