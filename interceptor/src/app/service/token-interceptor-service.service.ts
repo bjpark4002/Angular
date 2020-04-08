@@ -27,30 +27,30 @@ export class TokenInterceptorServiceService implements HttpInterceptor {
     // this is required because HttpRequests are immutable 
     const authReq = req.clone({headers: newHeaders});
 
-    //then we return an observable that will run the request 
-    //or pass it to the next interceptor if any.
-    return next.handle(authReq);  //intercepting a request
+    // //then we return an observable that will run the request 
+    // //or pass it to the next interceptor if any.
+    // return next.handle(authReq);  //intercepting a request
 
 
-    ///////////////////////////////////////////////////////////////
+    // ///////////////////////////////////////////////////////////////
 
-    // return next.handle(authReq).pipe( // intercepting a response
-    //   // do work here
+    return next.handle(authReq).pipe( // intercepting a response
+      // do work here
 
-    //   // we use the map operator to change the data from the response 
-    //   map(resp => {
-    //     //several http events go through that observable 
-    //     //so we make sure that this is http response.
+      // we use the map operator to change the data from the response 
+      map(resp => {
+        //several http events go through that observable 
+        //so we make sure that this is http response.
 
-    //     if(resp instanceof HttpResponse){
-    //       //just like for request, we create a clone of the response
-    //       //and make changes to it, then return that clone.
+        if(resp instanceof HttpResponse){
+          //just like for request, we create a clone of the response
+          //and make changes to it, then return that clone.
 
 
-    //       return resp.clone( {body: [{title: 'Replaced data in interceptor'}]}  );
-    //     }
-    //   })
-    // );
+          return resp.clone( {body: [{title: 'Replaced data in interceptor'}]}  );
+        }
+      })
+    );
 
 
   }
