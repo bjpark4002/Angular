@@ -22,6 +22,7 @@ export class EmployeeService {
 
   getEmployees() : Observable<Employee[]> {
     return this.httpClient.get<Employee[]>('URL').pipe(catchError(this.handleError));
+                                            // you can add more than one pipe-able operators (separated by comma)
   }
 
   //httpClient mothod can handle both server and client side error.

@@ -21,7 +21,7 @@ export class TokenInterceptorServiceService implements HttpInterceptor {
 
     if(token){
       //if we have a token, we append it to our new headers.
-      newHeaders = newHeaders.append('authtoken', token);
+      newHeaders = newHeaders.append('authtoken ', token);
     }
     //finally we have to clone our request with our new headers
     // this is required because HttpRequests are immutable 
